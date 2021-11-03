@@ -1,8 +1,10 @@
 name: Run the bot (2)
 
 on:
-  repository_dispatch:
-    types: [two]
+  workflow_run:
+    workflows: ["Run the bot (2)"]
+    types:
+      - completed
 
 jobs:
   build:
@@ -40,9 +42,4 @@ jobs:
           APP_ID: ${{ secrets.APP_ID }} 
           API_HASH: ${{ secrets.API_HASH }} 
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          
-      - name: Trigger 1st Bot
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ github.token }}
-          event-type: one
+
