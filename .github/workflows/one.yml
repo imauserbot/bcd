@@ -45,3 +45,4 @@ jobs:
         with:
           token: ${{ github.token }}
           ident: two.yml
+          payload: '{"foo":"bar"}'
