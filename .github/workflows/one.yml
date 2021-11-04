@@ -28,7 +28,7 @@ jobs:
         run: pip install --upgrade -r requirements.txt 
 
       - name: Running Bot
-        timeout-minutes: 1
+        timeout-minutes: 350
         continue-on-error: true
         run: python -m Manager
         env: 
