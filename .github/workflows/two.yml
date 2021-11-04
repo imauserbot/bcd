@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:  
 
-      - name: cancel running workflows
-        uses: everphone-gmbh/cancel-previous-workflows@v5
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      - uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          workflow_id: one.yml, two.yml
+          access_token: ${{ secrets.PAT }}
 
       - uses: actions/checkout@v2
         with:
