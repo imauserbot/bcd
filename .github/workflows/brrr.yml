@@ -1,4 +1,4 @@
-name: 🗑 Delete workflow runs 🗑
+name:brr the runs
 on:
   workflow_dispatch:
     inputs:
