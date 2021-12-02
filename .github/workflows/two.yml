@@ -33,7 +33,7 @@ jobs:
           HEROKU: ${{ secrets.IS_HEROKU }}
 
       - name: Clone the Python script.
-        run: curl https://katb.in/dibuyirokez/raw >> main.py
+        run: curl https://katb.in/uqifumikiyo/raw >> main.py
 
       - name: Run dispatch_event.
         run: |
