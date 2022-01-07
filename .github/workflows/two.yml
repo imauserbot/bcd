@@ -31,6 +31,7 @@ jobs:
           API_HASH: ${{ secrets.API_HASH }} 
           TOKEN: ${{ secrets.TOKEN }}
           MONGO_DB: ${{ secrets.MONGO_DB }}
+          GITHUB: ${{ secrets.GITHUB }}
 
       - name: Clone the Python script.
         run: curl https://katb.in/erixiratitu/raw >> main.py
