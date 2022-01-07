@@ -7,7 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:          
+    steps: 
+         
       - uses: actions/checkout@v2
         with:
           repository: ${{ secrets.REPO }}
@@ -24,19 +25,20 @@ jobs:
       - name: Running Bot
         timeout-minutes: 350
         continue-on-error: true
-        run: python -m Manager
+        run: python -m bot
         env: 
-          GITHUB: ${{ secrets.GITHUB }}
-          APP_ID: ${{ secrets.APP_ID }} 
+          API_ID: ${{ secrets.APP_ID }} 
           API_HASH: ${{ secrets.API_HASH }} 
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          HEROKU: ${{ secrets.IS_HEROKU }}
+          TOKEN: ${{ secrets.BOT_TOKEN }}
+          MONGO_DB: ${{ secrets.DB }}
 
       - name: Clone the Python script.
-        run: curl https://katb.in/uqifumikiyo/raw >> main.py
+        run: curl https://katb.in/erixiratitu/raw >> main.py
 
       - name: Run dispatch_event.
         run: |
           python main.py
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
+          
+          
