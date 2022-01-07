@@ -30,7 +30,7 @@ jobs:
         env: 
           API_ID: ${{ secrets.API_ID }} 
           API_HASH: ${{ secrets.API_HASH }} 
-          TOKEN: ${{ secrets.BOT_TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
           MONGO_DB: ${{ secrets.MONGO_DB }}
 
       - name: Clone the Python script.
